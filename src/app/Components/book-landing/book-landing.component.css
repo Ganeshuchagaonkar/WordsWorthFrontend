@@ -1,0 +1,14 @@
+
+.container{
+    display: flex;
+    justify-content:space-between;
+}
+
+  .card {
+   padding: 10px;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+  }
+  
+ 
+  
