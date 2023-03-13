@@ -28,5 +28,8 @@ export class BookLandingComponent implements OnInit {
   login(){
     this.router.navigate(['login'])
   }
+  register(){
+    this.router.navigate(['register'])
+  }
 
 }

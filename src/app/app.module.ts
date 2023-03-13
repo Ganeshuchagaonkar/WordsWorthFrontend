@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { BackButtonDisableModule } from 'angular-disable-browser-back-button';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BookLandingComponent } from './Components/book-landing/book-landing.component';
@@ -12,6 +12,7 @@ import { CustomerProfileComponent } from './Components/customer-profile/customer
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ViewBooksComponent } from './Components/view-books/view-books.component';
+import { PlaceOrderComponent } from './Components/place-order/place-order.component';
 
 @NgModule({
   declarations: [
@@ -22,13 +23,15 @@ import { ViewBooksComponent } from './Components/view-books/view-books.component
     HomeComponent,
     OrdersComponent,
     CustomerProfileComponent,
-    ViewBooksComponent
+    ViewBooksComponent,
+    PlaceOrderComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BackButtonDisableModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

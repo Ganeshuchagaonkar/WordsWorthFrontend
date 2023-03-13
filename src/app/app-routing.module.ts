@@ -5,6 +5,7 @@ import { CustomerProfileComponent } from './Components/customer-profile/customer
 import { HomeComponent } from './Components/home/home.component';
 import { LoginComponent } from './Components/login/login.component';
 import { OrdersComponent } from './Components/orders/orders.component';
+import { PlaceOrderComponent } from './Components/place-order/place-order.component';
 import { SignUpComponent } from './Components/sign-up/sign-up.component';
 import { ViewBooksComponent } from './Components/view-books/view-books.component';
 
@@ -30,6 +31,9 @@ component:OrdersComponent
 },
 {path:'viewbook/:id',
 component:ViewBooksComponent  
+},
+{path:'placeorder/:id',
+component:PlaceOrderComponent  
 },
 
 

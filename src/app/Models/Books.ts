@@ -4,7 +4,7 @@ export class Books {
     bookName: String;
     authorName: String;
     price: number;
-    category: number;
+    category: String;
     bookQuantity: number;
     bookAvailabilty:boolean
 
@@ -14,7 +14,7 @@ export class Books {
         this.bookName= '';
         this.authorName='';
         this.price=0;
-        this.category=0;
+        this.category='';
         this.bookQuantity=0;
         this.bookAvailabilty=true;
     }
