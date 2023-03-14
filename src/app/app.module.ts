@@ -14,6 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ViewBooksComponent } from './Components/view-books/view-books.component';
 import { PlaceOrderComponent } from './Components/place-order/place-order.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +32,8 @@ import { PlaceOrderComponent } from './Components/place-order/place-order.compon
     FormsModule,
     HttpClientModule,
     AppRoutingModule,
-    BackButtonDisableModule.forRoot()
+    BackButtonDisableModule.forRoot(),
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

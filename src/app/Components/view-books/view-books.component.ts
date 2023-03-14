@@ -11,17 +11,19 @@ import { BookServiceService } from 'src/app/Services/book-service.service';
 })
 export class ViewBooksComponent implements OnInit {
 id:any=0
+val:any=0
 book:Books=new Books()
   constructor(private router:Router, private route:ActivatedRoute,private bookService:BookServiceService) { }
 
   ngOnInit(): void {
     this.id=this.route.snapshot.paramMap.get('id');
+    this.val=this.route.snapshot.paramMap.get('val')
   
     this.getBookDetail()
   }
 getBookDetail(){
  
-this.bookService.bookById(this.id).subscribe(data=>{
+this.bookService.bookById(this.val).subscribe(data=>{
   if(data!=null){
     this.book=data;
     console.log(data)
@@ -31,6 +33,10 @@ this.bookService.bookById(this.id).subscribe(data=>{
 })
 }
 
+
+buyNow(bookId:any){
+  this.router.navigate(['placeorder/',this.id,bookId])
+}
   home(){
     this.router.navigate(['customer', this.id])
     }
@@ -41,6 +47,6 @@ this.bookService.bookById(this.id).subscribe(data=>{
       this.router.navigate(['login'])
     }
     orders(){
-    this.router.navigate(['orders', this.id])
+    this.router.navigate(['orders', this.id,this.val])
     }
 }

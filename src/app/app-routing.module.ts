@@ -29,10 +29,10 @@ component:HomeComponent
 {path:'orders/:id',
 component:OrdersComponent  
 },
-{path:'viewbook/:id',
+{path:'viewbook/:id/:val',
 component:ViewBooksComponent  
 },
-{path:'placeorder/:id',
+{path:'placeorder/:id/:val',
 component:PlaceOrderComponent  
 },
 

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+
 import { CustomerServiceService } from 'src/app/Services/customer-service.service';
 
 @Component({
@@ -23,6 +24,7 @@ export class LoginComponent implements OnInit {
     this.Customer.getByEmail(this.email).subscribe(data=>{
       if(data!=null){
         if(data.email== this.email && data.password== this.pass){
+         
           this.router.navigate(['customer/',data.customerId])
         }
         else{

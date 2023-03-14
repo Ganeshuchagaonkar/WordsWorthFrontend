@@ -1,39 +1,4 @@
-<div class="container">
-    <div>
-      <nav class="nav justify-content-center">
-        <a class="nav-link disabled" href="#">English</a>
-        <a class="nav-link disabled" href="#">|</a>
-        <a class="nav-link disabled" href="#">INR</a>
-      </nav>
-    </div>
-    <div>
-      <nav class="nav justify-content-center">
-        <a class="nav-link" href="#" style="text-decoration: none; color: gray"
-          ><i
-            class="bi bi-envelope"
-            style="margin-right: 5px; text-decoration: none; color: gray"
-          ></i
-          >Email</a
-        >
-        <a class="nav-link" href="#" style="text-decoration: none; color: gray"
-          ><i
-            class="bi bi-telephone-fill"
-            style="margin-right: 5px; text-decoration: none; color: gray"
-          ></i
-          >Call us</a
-        >
-        <a class="nav-link" href="#" style="text-decoration: none; color: gray"
-          ><i
-            class="bi bi-person-fill"
-            style="margin-right: 5px; text-decoration: none; color: gray"
-          ></i
-          >Admin Panel</a
-        >
-      </nav>
-    </div>
-  </div>
-  
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#" style="color: red; font-weight: bold"
       ><Span style="color: rgb(84, 84, 186); font-weight: bolder; font-size: 40px"
         >W</Span
@@ -79,4 +44,34 @@
     </div>
   </nav>
 
-  <h1>My Orders</h1>
+  <div class="container">
+   <table class="table" >
+    <thead>
+      <tr>
+        <th>Order Id</th>
+        <th>Book Id</th>
+        <th>Quantity</th>
+        <th>Total Price</th>
+        <th>Payment Status</th>
+        <th>Order Status</th>
+        <th>Order Date</th>
+        <th>Delivery Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let o of orderlist">
+        <td>{{o.orderId}}</td>
+        <td>{{o.bookId}}</td>
+        <td>{{o.quantity}}</td>
+        <td>{{o.totalPrice}}</td>
+        <td>{{o.paymentStatus}}</td>
+        <td>{{o.orderStatus}}</td>
+        <td>{{o.orderDate}}</td>
+        <td>{{o.deliveryDate}}</td>
+      </tr>
+    </tbody>
+   </table>
+  </div>
+
+
+

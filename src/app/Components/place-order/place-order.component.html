@@ -49,13 +49,13 @@
                         <div class=" row">
                            <div class="col form-group" >
                             <label for="" class="col"><h6>Quantity</h6></label>
-                            <input type="number" class="col form-control" min="1" value="1" placeholder="Quantity" style="width: 100px;"></div>
+                            <input type="number" class="col form-control" min="1" value="1"  name="quantity" [(ngModel)]="quantity" placeholder="Quantity" style="width: 100px;"></div>
                             <div class="col form-group">
-                                <h6 class="col">Total Price</h6>
-                                <h6 class="col">{{book.price}}</h6>
+                                <h6 class="col">Unit Price</h6>
+                                <h6 class="col">{{book.price | currency:'INR'}}</h6>
                             </div> 
                         </div>
-                        <div class="row"><button class="btn btn-success form-control" (click)="placeOrder()" style="margin-left: 30px; margin-right: 30px; font-weight: bold;"> Place Order</button></div>
+                        <div class="row"><button class="btn btn-success form-control" (click)="placeOrder(book.bookId,book.price)" style="margin-left: 30px; margin-right: 30px; font-weight: bold;"> Place Order</button></div>
                 </div>
             </div>
         </div>

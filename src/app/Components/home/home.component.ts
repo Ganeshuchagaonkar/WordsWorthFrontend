@@ -12,9 +12,12 @@ export class HomeComponent implements OnInit {
   books: Books[]= [];
  
   constructor(private router:Router, private route:ActivatedRoute,private bookService:BookServiceService) { }
- id:any=0;
+   id:any=0;
+   val:any=0
   ngOnInit(): void {
     this.id=this.route.snapshot.paramMap.get('id');
+    this.val=this.route.snapshot.paramMap.get('val')
+   
     this.loadData()
   }
 loadData(){
@@ -29,12 +32,13 @@ loadData(){
 // View Book
 viewDetails(bookId:any){
   
- this.router.navigate(['/viewbook/',bookId])
+ this.router.navigate(['/viewbook/',this.id,bookId])
 
 }
-buyNow(){
+  buyNow(bookid:any){
+    this.router.navigate(['placeorder',this.id, bookid])
+  }
 
-}
 
 home(){
 this.router.navigate(['customer', this.id])
