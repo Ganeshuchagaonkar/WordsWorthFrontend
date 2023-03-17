@@ -114,7 +114,7 @@
             </div>
             <div class="col-md-6 col-lg-7 d-flex align-items-center">
               <div class="card-body p-4 p-lg-5 text-black">
-                <form>
+                <form class="was-validated" >
                   <div class="d-flex align-items-center mb-3 pb-1">
                     <h4>Let's Get Started...!</h4>
                   </div>
@@ -132,6 +132,7 @@
                       <input
                         type="email"
                         id="emai" name = "emai"
+                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$"
                         class="form-control form-control-lg" [(ngModel)]= "email" required 
                         />
                       <label class="form-label" for="form2Example17"
